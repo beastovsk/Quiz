@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Layout from './hoc/Layout/Layout'
+import Quiz from './containers/Quiz/Quiz'
 
 class App extends Component {
 
@@ -8,9 +9,7 @@ class App extends Component {
 
         return (
             <Layout>
-                <div style={{width: 400, border: '1px solid #ccc'}}>
-                    <h1>Layout</h1>
-                </div>
+                <Quiz />
             </Layout>
         )
     }
