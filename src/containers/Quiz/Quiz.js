@@ -5,7 +5,16 @@ import ActiveQuiz from '../../components/ActiveQuiz/ActiveQuiz'
 
 class Quiz extends Component {
     state = {
-        quiz: []
+        quiz: [
+            {
+                answers: [
+                    {text: 'First Question'},
+                    {text: 'Second Question'},
+                    {text: 'Third Question'},
+                    {text: 'Fourth Question'}
+                ]
+            }
+        ]
     }
 
     render() {
@@ -13,9 +22,11 @@ class Quiz extends Component {
         return(
             <div className={classes.Quiz}>
                 <div className={classes.QuizWrapper}>
-                    <h1>Quiz</h1>
+                    <h1>Answer the questions</h1>
                     
-                    <ActiveQuiz />
+                    <ActiveQuiz 
+                        answers={this.state.quiz[0].answers}
+                    />
                 </div>
             </div>
         )
