@@ -3,12 +3,13 @@ import classes from './ActiveQuiz.module.css'
 import AnswersList from "./AnswersList/AnswersList"
 
 
-const ActiveQuiz = props => (
-    <div className={classes.ActiveQuiz}>
+const ActiveQuiz = props => {
+    return (
+        <div className={classes.ActiveQuiz}>
         <p className={classes.Question}>
             <span>
                 <strong>2.</strong> &nbsp;
-                Question?
+                {props.question}
             </span>
 
             <small>4/12</small>
@@ -17,8 +18,10 @@ const ActiveQuiz = props => (
 
         <AnswersList 
             answers={props.answers}
+            onAnswerClick={props.onAnswerClick}
         />
-    </div>
-)
+    </div> 
+    )
+}
 
 export default ActiveQuiz
