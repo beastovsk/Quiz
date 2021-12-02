@@ -1,2 +1,2 @@
-Quiz.app 
-  Task app built with React.js
+Quiz app built with React.js
+	
