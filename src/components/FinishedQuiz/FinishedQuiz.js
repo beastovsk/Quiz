@@ -21,8 +21,6 @@ const FinishedQuiz = props => {
                         classes[props.results[quizItem.id]]
                     ]
 
-                    debugger
-
                     return (
                         <li key={index}>
                             <strong>{index + 1}</strong>.&nbsp;
